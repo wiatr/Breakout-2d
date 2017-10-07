@@ -5,21 +5,21 @@ var x = canvas.width/2;
 var y = canvas.height-30;
 var dx = 2;
 var dy = -2;
-var ballRadius = 10;
+var ballRadius = 20;
 var color = "#0095DD";
-var paddleHeight = 10;
-var paddleWidth = 75;
+var paddleHeight = 20;
+var paddleWidth = 150;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
-var interval = 10;
-var brickRowCount = 3;
-var brickColumnCount = 5;
+var interval = 8;
+var brickRowCount = 5;
+var brickColumnCount = 11;
 var brickWidth = 75;
-var brickHeight = 20;
+var brickHeight = 30;
 var brickPadding = 10;
 var brickOffsetTop = 30;
-var brickOffsetLeft = 30;
+var brickOffsetLeft = 17;
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
@@ -162,12 +162,12 @@ function collisionDetection() {
 }
 
 function drawScore() {
-    ctx.font = "16px Arial";
+    ctx.font = "20px Arial";
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Score: "+score, 8, 20);
 }
 function drawLives() {
-    ctx.font = "16px Arial";
+    ctx.font = "20px Arial";
     ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+    ctx.fillText("Lives: "+lives, canvas.width-85, 20);
 }
